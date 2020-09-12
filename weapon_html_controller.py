@@ -1,4 +1,4 @@
-from weapon import Weapon
+from meelee_weapon import MeeleeWeapon
 
 
 class WeaponHtmlController:
@@ -16,15 +16,15 @@ class WeaponHtmlController:
 
     def create_weapon(self):
         name = self.columns[0].find("a").get_text()
-        phys = self.columns[1].find_next("p")
-        phys_dam = phys.get_text()
-        phys_def = phys.find_next("p").get_text()
-        mag = self.columns[2].find_next("p")
-        mag_dam = mag.get_text()
-        mag_def = mag.find_next("p").get_text()
-        fire = self.columns[3].find_next("p")
-        fire_dam = fire.get_text()
-        fire_def = fire.find_next("p").get_text()
+        phys = self.__get_double_values_from_column(self.columns[1])
+        phys_dam = phys[0]
+        phys_def = phys[1]
+        mag = self.__get_double_values_from_column(self.columns[2])
+        mag_dam = mag[0]
+        mag_def = mag[1]
+        fire = self.__get_double_values_from_column(self.columns[3])
+        fire_dam = fire[0]
+        fire_def = fire[1]
         aux = self.__get_aux_values(self.columns[4])
         aux_dam = aux[0]
         aux_type = aux[1]
@@ -44,12 +44,12 @@ class WeaponHtmlController:
         dur = self.columns[12].get_text()
         loc_string = self.__get_location_string(self.columns[13])
 
-        return Weapon(name=name, weapon_type=self.weapon_type, phys_atk=phys_dam, phys_def=phys_def, mag_atk=mag_dam,
-                      mag_def=mag_def, fire_atk=fire_dam, fire_def=fire_def, aux_damage=aux_dam, aux_type=aux_type,
-                      types_string=types_string, str_req=str_req, str_bonus=str_bonus, dex_req=dex_req,
-                      dex_bonus=dex_bonus, faith_req=faith_req, faith_bonus=faith_bonus,
-                      critical_damage=critical_damage,
-                      guard_break_reduction=grd_brk, weight=weight, durability=dur, location=loc_string)
+        return MeeleeWeapon(name=name, weapon_type=self.weapon_type, phys_atk=phys_dam, phys_def=phys_def,
+                            mag_atk=mag_dam, mag_def=mag_def, fire_atk=fire_dam, fire_def=fire_def, aux_damage=aux_dam,
+                            aux_type=aux_type, types_string=types_string, str_req=str_req, str_bonus=str_bonus,
+                            dex_req=dex_req, dex_bonus=dex_bonus, faith_req=faith_req, faith_bonus=faith_bonus,
+                            critical_damage=critical_damage,
+                            guard_break_reduction=grd_brk, weight=weight, durability=dur, location=loc_string)
 
     def __get_aux_values(self, page_element):
         """
@@ -66,7 +66,7 @@ class WeaponHtmlController:
             aux_dam = aux.get_text()
             aux_type = aux.find_next("p").find("img")["title"]
             return aux_dam, aux_type
-        elif aux_col_val != "-" and aux_col_val != "":
+        elif aux_col_val != "-" and aux_col_val != "" and aux_col_val != ' -':
             aux = page_element.get_text().split(" ")
             aux_dam = aux[1]
             aux_type = aux[0]

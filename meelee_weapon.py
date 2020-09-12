@@ -2,8 +2,8 @@ from sqlalchemy import Column, Integer, String, Numeric
 from database import Base
 
 
-class Weapon(Base):
-    __tablename__ = "weapons"
+class MeeleeWeapon(Base):
+    __tablename__ = "meelee_weapons"
 
     name = Column(String, primary_key=True)
     weapon_type = Column(String)
@@ -35,6 +35,9 @@ class Weapon(Base):
                 "str_bonus": self.str_bonus, "dex_req": self.dex_req, "dex_bonus": self.dex_bonus, "faith_req": self.faith_req,
                 "faith_bonus": self.faith_bonus, "critical_damage": self.critical_damage, "guard_break_reduction": self.guard_break_reduction,
                 "weight": self.weight, "durability": self.durability, "location": self.location}
+
+    def __str__(self):
+        return "<MeeleeWeapon name:%s weapon_type:%s>" % (self.name, self.weapon_type)
 
     """
     https://towardsdatascience.com/use-flask-and-sqlalchemy-not-flask-sqlalchemy-5a64fafe22a4
