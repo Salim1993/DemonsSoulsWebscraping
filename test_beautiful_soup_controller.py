@@ -19,10 +19,10 @@ def test_location_strings():
 
 def test_get_text_from_column_with_p_tag_and_br():
     answer = "8", "D"
-    test_string = """<td> <p>8<br><br>D</p> </td>"""
+    test_string = """<td> <p>8<br/><br/>D</p> </td>"""
     soup = BeautifulSoup(test_string, 'html.parser')
     controller = BeautifulSoupController()
-    tuple_to_check = controller.get_double_values_from_column(soup)
+    tuple_to_check = controller.get_double_values_from_column(soup.find("td"), False, False)
     assert answer == tuple_to_check
 
 
@@ -31,7 +31,7 @@ def test_get_text_from_column_with_only_br():
     test_string = "<td>9<br/><br/>D </td>"
     soup = BeautifulSoup(test_string, 'html.parser')
     controller = BeautifulSoupController()
-    tuple_to_check = controller.get_double_values_from_column(soup.find("td"))
+    tuple_to_check = controller.get_double_values_from_column(soup.find("td"), False, False)
     assert answer == tuple_to_check
 
 
@@ -40,5 +40,14 @@ def test_get_test_from_column_with_only_p_tag():
     test_string = "<td> <p>18</p> <p>D</p> </td>"
     soup = BeautifulSoup(test_string, 'html.parser')
     controller = BeautifulSoupController()
-    tuple_to_check = controller.get_double_values_from_column(soup)
+    tuple_to_check = controller.get_double_values_from_column(soup, False, False)
+    assert answer == tuple_to_check
+
+
+def test_check_text_replacement():
+    answer = 0, 0
+    test_string = "<td> <p>-</p> <p>-</p> </td>"
+    soup = BeautifulSoup(test_string, 'html.parser')
+    controller = BeautifulSoupController()
+    tuple_to_check = controller.get_double_values_from_column(soup, True, True)
     assert answer == tuple_to_check

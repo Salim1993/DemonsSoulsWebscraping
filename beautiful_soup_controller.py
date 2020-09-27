@@ -20,7 +20,7 @@ class BeautifulSoupController:
         """
         return element.get_text()
 
-    def get_double_values_from_column(self, page_element):
+    def get_double_values_from_column(self, page_element, replace_number_first, replace_number_second):
         """
         function to get pair value from columns. Some pages use pair of <p> tags to separate values.
         while others separate the values using <br>
@@ -28,20 +28,25 @@ class BeautifulSoupController:
         :param page_element: PageElement from beautiful soup. Contains table columns
         :return: Tuple of correct pair value in columns
         """
-        p_tag = page_element.find("p")
-        next_p_tag = None
-        if p_tag is not None:
-            next_p_tag = p_tag.find_next("p")
-        if next_p_tag:
-            first = p_tag.get_text()
-            second = next_p_tag.get_text()
-            return first, second
-        elif p_tag:
-            text = p_tag.get_text()
-            return text[0], text[1]
+        list_to_return = ["", ""]
+        p_tag = page_element.findChildren("p")
+        size_of_children_list = len(p_tag)
+        if size_of_children_list == 2:
+            list_to_return[0] = p_tag[0].get_text()
+            list_to_return[1] = p_tag[1].get_text()
+        elif size_of_children_list == 1:
+            text = p_tag[0].get_text()
+            list_to_return[0] = text[0]
+            list_to_return[1] = text[1]
         else:
             text = page_element.contents
-            return text[0], text[3].replace("\xa0", "")
+            list_to_return[0] = text[0]
+            list_to_return[1] = text[3].replace("\xa0", "")
+        if replace_number_first and list_to_return[0] == "-":
+            list_to_return[0] = 0
+        if replace_number_second and list_to_return[1] == "-":
+            list_to_return[1] = 0
+        return tuple(list_to_return)
 
     def get_types_string(self, page_element):
         """

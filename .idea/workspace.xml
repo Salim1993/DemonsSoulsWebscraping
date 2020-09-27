@@ -15,11 +15,13 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09f3b4ad-38cf-414a-aff3-2bf564ae7480" name="Default Changelist" comment="">
+    <list default="true" id="09f3b4ad-38cf-414a-aff3-2bf564ae7480" name="Default Changelist" comment="changed weapon.py to meelee_weapon.py&#10;&#10;need to separate meelee weapons from ranged&#10;and magical weapons since they have different&#10;columns">
+      <change beforePath="$PROJECT_DIR$/.idea/Python Webscraping.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Python Webscraping.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautiful_soup_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/beautiful_soup_controller.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demon_souls.db" beforeDir="false" afterPath="$PROJECT_DIR$/demon_souls.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weapon.py" beforeDir="false" afterPath="$PROJECT_DIR$/weapon.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_beautiful_soup_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_beautiful_soup_controller.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weapon_html_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/weapon_html_controller.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +33,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="Python Unit Test" />
       </list>
     </option>
   </component>
@@ -53,10 +56,10 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
   </component>
-  <component name="RunManager">
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.main">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Python Webscraping" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -68,7 +71,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -77,9 +80,77 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest for test_beautiful_soup_controller.test_check_text_replacement" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Python Webscraping" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_beautiful_soup_controller.test_check_text_replacement&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_beautiful_soup_controller.test_get_test_from_column_with_only_p_tag" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Python Webscraping" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_beautiful_soup_controller.test_get_test_from_column_with_only_p_tag&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_beautiful_soup_controller.test_get_text_from_column_with_only_br" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Python Webscraping" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_beautiful_soup_controller.test_get_text_from_column_with_only_br&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_beautiful_soup_controller.test_get_text_from_column_with_p_tag_and_br" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Python Webscraping" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_beautiful_soup_controller.test_get_text_from_column_with_p_tag_and_br&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python tests.pytest for test_beautiful_soup_controller.test_check_text_replacement" />
+        <item itemvalue="Python tests.pytest for test_beautiful_soup_controller.test_get_test_from_column_with_only_p_tag" />
+        <item itemvalue="Python tests.pytest for test_beautiful_soup_controller.test_get_text_from_column_with_only_br" />
+        <item itemvalue="Python tests.pytest for test_beautiful_soup_controller.test_get_text_from_column_with_p_tag_and_br" />
       </list>
     </recent_temporary>
   </component>
@@ -123,7 +194,21 @@
       <option name="project" value="LOCAL" />
       <updated>1599789861378</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="changed weapon.py to meelee_weapon.py&#10;&#10;need to separate meelee weapons from ranged&#10;and magical weapons since they have different&#10;columns">
+      <created>1599941937284</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1599941937284</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added test_beautiful_soup_controller.py&#10;&#10;working on test to figure out issues with values&#10;specifically about tables with 2 values in the column">
+      <created>1601152854608</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1601152854608</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -143,9 +228,15 @@
     <MESSAGE value="Got data into database&#10;&#10;Daggers are added&#10;will look to refactor and then&#10;will add other weapons" />
     <MESSAGE value="Added more sites to add to the database&#10;&#10;got most time of blades in, will add &#10;other types of weapons later" />
     <MESSAGE value="refactored html parsing into own class&#10;&#10;made WeaponHtmlController class to deal with parsing&#10;of the html. &#10;&#10;will look into making a db controller as well" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored html parsing into own class&#10;&#10;made WeaponHtmlController class to deal with parsing&#10;of the html. &#10;&#10;will look into making a db controller as well" />
+    <MESSAGE value="changed weapon.py to meelee_weapon.py&#10;&#10;need to separate meelee weapons from ranged&#10;and magical weapons since they have different&#10;columns" />
+    <MESSAGE value="added test_beautiful_soup_controller.py&#10;&#10;working on test to figure out issues with values&#10;specifically about tables with 2 values in the column" />
+    <option name="LAST_COMMIT_MESSAGE" value="added test_beautiful_soup_controller.py&#10;&#10;working on test to figure out issues with values&#10;specifically about tables with 2 values in the column" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600827885319">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600827885319" />
     <state x="712" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599182267973">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -155,77 +246,87 @@
     </state>
     <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599276037737" />
     <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser/1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1599703867691" />
-    <state x="586" y="88" key="CommitChangelistDialog2" timestamp="1599789860717">
+    <state x="586" y="71" key="CommitChangelistDialog2" timestamp="1601152853871">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="586" y="88" key="CommitChangelistDialog2/0.0.1920.1040/1920.-8.1920.1040@0.0.1920.1040" timestamp="1599789860717" />
+    <state x="586" y="71" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601152853871" />
+    <state x="586" y="71" key="CommitChangelistDialog2/0.0.1920.1040/1920.-8.1920.1040@0.0.1920.1040" timestamp="1599941936550" />
     <state x="586" y="88" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599452442501" />
-    <state width="624" height="466" key="DebuggerActiveHint" timestamp="1599278570027">
+    <state width="993" height="466" key="DebuggerActiveHint" timestamp="1601165180539">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="993" height="466" key="DebuggerActiveHint/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601165180539" />
     <state width="624" height="466" key="DebuggerActiveHint/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599278570027" />
-    <state width="1899" height="237" key="GridCell.Tab.0.bottom" timestamp="1599941462063">
+    <state width="1899" height="213" key="GridCell.Tab.0.bottom" timestamp="1601169360715">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="237" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.-8.1920.1040@0.0.1920.1040" timestamp="1599941462063" />
+    <state width="1899" height="213" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601169360715" />
+    <state width="1899" height="243" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.-8.1920.1040@0.0.1920.1040" timestamp="1599942086453" />
     <state width="1899" height="237" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599452446808" />
-    <state width="1899" height="237" key="GridCell.Tab.0.center" timestamp="1599941462063">
+    <state width="1899" height="213" key="GridCell.Tab.0.center" timestamp="1601169360715">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="237" key="GridCell.Tab.0.center/0.0.1920.1040/1920.-8.1920.1040@0.0.1920.1040" timestamp="1599941462063" />
+    <state width="1899" height="213" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601169360715" />
+    <state width="1899" height="243" key="GridCell.Tab.0.center/0.0.1920.1040/1920.-8.1920.1040@0.0.1920.1040" timestamp="1599942086453" />
     <state width="1899" height="237" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599452446807" />
-    <state width="1899" height="237" key="GridCell.Tab.0.left" timestamp="1599941462062">
+    <state width="1899" height="213" key="GridCell.Tab.0.left" timestamp="1601169360715">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="237" key="GridCell.Tab.0.left/0.0.1920.1040/1920.-8.1920.1040@0.0.1920.1040" timestamp="1599941462062" />
+    <state width="1899" height="213" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601169360715" />
+    <state width="1899" height="243" key="GridCell.Tab.0.left/0.0.1920.1040/1920.-8.1920.1040@0.0.1920.1040" timestamp="1599942086453" />
     <state width="1899" height="237" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599452446807" />
-    <state width="1899" height="237" key="GridCell.Tab.0.right" timestamp="1599941462063">
+    <state width="1899" height="213" key="GridCell.Tab.0.right" timestamp="1601169360715">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="237" key="GridCell.Tab.0.right/0.0.1920.1040/1920.-8.1920.1040@0.0.1920.1040" timestamp="1599941462063" />
+    <state width="1899" height="213" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601169360715" />
+    <state width="1899" height="243" key="GridCell.Tab.0.right/0.0.1920.1040/1920.-8.1920.1040@0.0.1920.1040" timestamp="1599942086453" />
     <state width="1899" height="237" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599452446807" />
-    <state width="1899" height="243" key="GridCell.Tab.1.bottom" timestamp="1599940939921">
+    <state width="1899" height="243" key="GridCell.Tab.1.bottom" timestamp="1601167526306">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="243" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.-8.1920.1040@0.0.1920.1040" timestamp="1599940939921" />
+    <state width="1899" height="243" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601167526306" />
+    <state width="1899" height="243" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.-8.1920.1040@0.0.1920.1040" timestamp="1599942086453" />
     <state width="1899" height="243" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599448624751" />
-    <state width="1899" height="243" key="GridCell.Tab.1.center" timestamp="1599940939921">
+    <state width="1899" height="243" key="GridCell.Tab.1.center" timestamp="1601167526306">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="243" key="GridCell.Tab.1.center/0.0.1920.1040/1920.-8.1920.1040@0.0.1920.1040" timestamp="1599940939921" />
+    <state width="1899" height="243" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601167526306" />
+    <state width="1899" height="243" key="GridCell.Tab.1.center/0.0.1920.1040/1920.-8.1920.1040@0.0.1920.1040" timestamp="1599942086453" />
     <state width="1899" height="243" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599448624751" />
-    <state width="1899" height="243" key="GridCell.Tab.1.left" timestamp="1599940939921">
+    <state width="1899" height="243" key="GridCell.Tab.1.left" timestamp="1601167526306">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="243" key="GridCell.Tab.1.left/0.0.1920.1040/1920.-8.1920.1040@0.0.1920.1040" timestamp="1599940939921" />
+    <state width="1899" height="243" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601167526306" />
+    <state width="1899" height="243" key="GridCell.Tab.1.left/0.0.1920.1040/1920.-8.1920.1040@0.0.1920.1040" timestamp="1599942086453" />
     <state width="1899" height="243" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599448624751" />
-    <state width="1899" height="243" key="GridCell.Tab.1.right" timestamp="1599940939921">
+    <state width="1899" height="243" key="GridCell.Tab.1.right" timestamp="1601167526306">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="243" key="GridCell.Tab.1.right/0.0.1920.1040/1920.-8.1920.1040@0.0.1920.1040" timestamp="1599940939921" />
+    <state width="1899" height="243" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601167526306" />
+    <state width="1899" height="243" key="GridCell.Tab.1.right/0.0.1920.1040/1920.-8.1920.1040@0.0.1920.1040" timestamp="1599942086453" />
     <state width="1899" height="243" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599448624751" />
-    <state x="461" y="164" key="SettingsEditor" timestamp="1598923828337">
+    <state x="461" y="164" key="SettingsEditor" timestamp="1601091349437">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601091349437" />
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598923828337" />
+    <state x="621" y="394" key="VCS.EditChangelistDialog" timestamp="1601152170846">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="621" y="394" key="VCS.EditChangelistDialog/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601152170846" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/weapon_html_controller.py</url>
-          <line>70</line>
-          <option name="timeStamp" value="4" />
+          <line>35</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/weapon_html_controller.py</url>
-          <line>68</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/weapon_html_controller.py</url>
-          <line>21</line>
-          <option name="timeStamp" value="6" />
+          <url>file://$PROJECT_DIR$/beautiful_soup_controller.py</url>
+          <line>44</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

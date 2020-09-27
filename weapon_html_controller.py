@@ -17,29 +17,32 @@ class WeaponHtmlController(BeautifulSoupController):
 
     def create_weapon(self):
         name = self.columns[0].find("a").get_text()
-        phys = self.get_double_values_from_column(self.columns[1])
+        # FUCK the Reaper Scythe
+        if name == "Reaper Scythe":
+            return self.__return_empty_weapon(name)
+        phys = self.get_double_values_from_column(self.columns[1], True, True)
         phys_dam = phys[0]
         phys_def = phys[1]
-        mag = self.get_double_values_from_column(self.columns[2])
+        mag = self.get_double_values_from_column(self.columns[2], True, True)
         mag_dam = mag[0]
         mag_def = mag[1]
-        fire = self.get_double_values_from_column(self.columns[3])
+        fire = self.get_double_values_from_column(self.columns[3], True, True)
         fire_dam = fire[0]
         fire_def = fire[1]
         aux = self.__get_aux_values(self.columns[4])
         aux_dam = aux[0]
         aux_type = aux[1]
         types_string = self.get_types_string(self.columns[5])
-        strength = self.get_double_values_from_column(self.columns[6])
+        strength = self.get_double_values_from_column(self.columns[6], True, False)
         str_req = strength[0]
         str_bonus = strength[1]
-        dex = self.get_double_values_from_column(self.columns[7])
+        dex = self.get_double_values_from_column(self.columns[7], True, False)
         dex_req = dex[0]
         dex_bonus = dex[1]
-        faith = self.get_double_values_from_column(self.columns[8])
+        faith = self.get_double_values_from_column(self.columns[8], True, False)
         faith_req = faith[0]
         faith_bonus = faith[1]
-        critical_damage = self.columns[9].find_next("p").get_text()
+        critical_damage = self.get_double_values_from_column(self.columns[9], True, False)[0]
         grd_brk = self.columns[10].get_text()
         weight = self.columns[11].get_text()
         dur = self.columns[12].get_text()
@@ -74,3 +77,9 @@ class WeaponHtmlController(BeautifulSoupController):
             return aux_dam, aux_type
         else:
             return "-", "-"  # default value
+
+    def __return_empty_weapon(self, name):
+        return MeeleeWeapon(name=name, weapon_type=self.weapon_type, phys_atk=0, phys_def=0,
+                            mag_atk=0, mag_def=0, fire_atk=0, fire_def=0, aux_damage=0, aux_type="", types_string="",
+                            str_req=0, str_bonus="", dex_req=0, dex_bonus="", faith_req=0, faith_bonus="",
+                            critical_damage=0, guard_break_reduction=0, weight=0, durability=0, location="")

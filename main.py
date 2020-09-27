@@ -111,24 +111,24 @@ def download_and_handle_data(url_data_holder):
 
 
 def create_url_list():
-    dagger_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Daggers", "dagger.html", "dagger")
-    straight_sword_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Straight+Swords", "straight_sword.html", "straight sword")
-    large_sword_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Large+Swords", "large_sword.html", "large sword")
-    very_large_sword_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Very+Large+Swords", "very_large_sword.html", "very large sword")
-    curved_sword_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Curved+Swords", "curved_sword.html", "curved sword")
-    katana_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Katanas", "katana.html", "katana")
-    thrusting_sword_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Thrusting+Swords", "thrusting_sword.html", "thrusting sword")
-    axes_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Axes", "axe.html", "axe")
-    large_axes_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Large+Axes", "large_axe.html", "large axe")
-    hammer_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Hammers", "hammer.html", "hammer")
-    large_hammer_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Large+Hammers", "large_hammer.html", "large hammer")
-    fist_weapon_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Fist+Weapons", "fist_weapon.html", "fist weapon")
-    spear_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Spears", "spear.html", "spear")
-    polearm_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Polearms", "polearm.html", "polearm")
-    # bows_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Bows", "bow.html", "bow")
-    # crossbows_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Crossbows", "crossbow.html", "crossbow")
+    dagger_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Daggers", "files/dagger.html", "dagger")
+    straight_sword_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Straight+Swords", "files/straight_sword.html", "straight sword")
+    large_sword_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Large+Swords", "files/large_sword.html", "large sword")
+    very_large_sword_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Very+Large+Swords", "files/very_large_sword.html", "very large sword")
+    curved_sword_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Curved+Swords", "files/curved_sword.html", "curved sword")
+    katana_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Katanas", "files/katana.html", "katana")
+    thrusting_sword_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Thrusting+Swords", "files/thrusting_sword.html", "thrusting sword")
+    axes_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Axes", "files/axe.html", "axe")
+    large_axes_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Large+Axes", "files/large_axe.html", "large axe")
+    hammer_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Hammers", "files/hammer.html", "hammer")
+    large_hammer_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Large+Hammers", "files/large_hammer.html", "large hammer")
+    fist_weapon_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Fist+Weapons", "files/fist_weapon.html", "fist weapon")
+    spear_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Spears", "files/spear.html", "spear")
+    polearm_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Polearms", "files/polearm.html", "polearm")
+    # bows_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Bows", "files/bow.html", "bow")
+    # crossbows_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Crossbows", "files/crossbow.html", "crossbow")
     return (dagger_url, straight_sword_url, large_sword_url, very_large_sword_url, curved_sword_url, katana_url, thrusting_sword_url,
-            axes_url, large_axes_url, hammer_url, large_hammer_url, fist_weapon_url, spear_url, polearm_url)  # , bows_url, crossbows_url)
+             axes_url, large_axes_url, hammer_url, large_hammer_url, fist_weapon_url, spear_url, polearm_url)  # , bows_url, crossbows_url)
 
 
 def main():
