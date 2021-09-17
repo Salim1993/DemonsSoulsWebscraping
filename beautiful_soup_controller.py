@@ -25,6 +25,8 @@ class BeautifulSoupController:
         function to get pair value from columns. Some pages use pair of <p> tags to separate values.
         while others separate the values using <br>
 
+        :param replace_number_first: Boolean, will replace first number to 0 if value is -
+        :param replace_number_second: Boolean, will replace second number to 0 if value is -
         :param page_element: PageElement from beautiful soup. Contains table columns
         :return: Tuple of correct pair value in columns
         """

@@ -43,9 +43,9 @@ class WeaponHtmlController(BeautifulSoupController):
         faith_req = faith[0]
         faith_bonus = faith[1]
         critical_damage = self.get_double_values_from_column(self.columns[9], True, False)[0]
-        grd_brk = self.columns[10].get_text()
-        weight = self.columns[11].get_text()
-        dur = self.columns[12].get_text()
+        grd_brk = self.columns[10].get_text().strip()
+        weight = self.columns[11].get_text().strip()
+        dur = self.columns[12].get_text().strip()
         loc_string = self.get_list_of_strings(self.columns[13])
 
         return MeeleeWeapon(name=name, weapon_type=self.weapon_type, phys_atk=phys_dam, phys_def=phys_def,

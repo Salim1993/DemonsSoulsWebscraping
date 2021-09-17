@@ -1,0 +1,4 @@
+workspace.xml
+demon_souls.db
+*.html
+__pycache__/
