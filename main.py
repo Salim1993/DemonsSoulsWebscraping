@@ -36,7 +36,7 @@ def simple_get(url):
 
 def save_html(url, path):
     fp = requests.get(url, headers={'User-Agent': 'test'})
-    with open(path, "w", encoding="utf-8") as fo:
+    with open(path, "w+", encoding="utf-8") as fo:
         fo.write(fp.text)
 
 
@@ -117,7 +117,8 @@ def create_url_list():
     very_large_sword_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Very+Large+Swords", "files/very_large_sword.html", "very large sword")
     curved_sword_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Curved+Swords", "files/curved_sword.html", "curved sword")
     katana_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Katanas", "files/katana.html", "katana")
-    thrusting_sword_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Thrusting+Swords", "files/thrusting_sword.html", "thrusting sword")
+    # Disabling thrusting sword for now, table now has new Column for Magic requirement that needs to be accounted for or else it breaks everything
+    # thrusting_sword_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Thrusting+Swords", "files/thrusting_sword.html", "thrusting sword")
     axes_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Axes", "files/axe.html", "axe")
     large_axes_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Large+Axes", "files/large_axe.html", "large axe")
     hammer_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Hammers", "files/hammer.html", "hammer")
@@ -127,7 +128,7 @@ def create_url_list():
     polearm_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Polearms", "files/polearm.html", "polearm")
     # bows_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Bows", "files/bow.html", "bow")
     # crossbows_url = UrlDataHolder("https://demonssouls.wiki.fextralife.com/Crossbows", "files/crossbow.html", "crossbow")
-    return (dagger_url, straight_sword_url, large_sword_url, very_large_sword_url, curved_sword_url, katana_url, thrusting_sword_url,
+    return (dagger_url, straight_sword_url, large_sword_url, very_large_sword_url, curved_sword_url, katana_url, # thrusting_sword_url, disabled for reason at line 120
              axes_url, large_axes_url, hammer_url, large_hammer_url, fist_weapon_url, spear_url, polearm_url)  # , bows_url, crossbows_url)
 
 
