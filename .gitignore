@@ -2,3 +2,5 @@ workspace.xml
 demon_souls.db
 *.html
 __pycache__/
+.venv/
+.idea/
